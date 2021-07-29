@@ -12,10 +12,7 @@ bucket = "out"
 entry-point = "./"
 
 # uncomment and adjust following if you are not using GitHub Actions
-#[env.production]
-#kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
-#zone_id="xxx"
-#route="xxx"
-[[kv_namespaces]]
-  binding = "KV_STATUS_PAGE"
-    id = "29d11f6611cf4bfd9f5d54d07b801373"
+[env.production]
+kv-namespaces = [{binding="KV_STATUS_PAGE", id="29d11f6611cf4bfd9f5d54d07b801373"}]
+zone_id="982596ae593eabad86230855fc78a48c"
+route="https://status.financiatec.co"
