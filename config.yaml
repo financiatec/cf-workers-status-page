@@ -1,8 +1,8 @@
 settings:
-  title: 'Status Page'
+  title: 'Financiatec Status Page'
   url: 'https://status.financiatec.co' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 30 # number of days you want to display in histogram
+  daysInHistogram: 60 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -16,15 +16,14 @@ settings:
 
 monitors:
   - id: www.financiacapital.cl # unique identifier
-    name: www.financiacapital.cl
+    name: Financia Capital
     url: 'https://www.financiacapital.cl/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
   - id: www.financiatec.cl
-    name: www.financiatec.cl
-    description: 'Built for anything connected to the Internet.'
+    name: Financiatec
     url: 'https://www.financiatec.cl'
     method: GET
     expectStatus: 200
@@ -38,6 +37,12 @@ monitors:
   - id: FC Admin
     name: FC Admin
     url: 'https://admin.financiatec.cl/'
+    method: GET
+    expectStatus: 200
+
+  - id: FC Admin Dev
+    name: FC Admin  Dev
+    url: 'https://admindev.financiatec.co/'
     method: GET
     expectStatus: 200
 
